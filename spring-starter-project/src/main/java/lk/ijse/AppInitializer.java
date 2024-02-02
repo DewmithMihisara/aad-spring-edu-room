@@ -20,6 +20,8 @@ public class AppInitializer {
         SpringBean bean1 = ctx.getBean(SpringBean.class);
         System.out.println(bean1);
 
+        SpringBean springBean = (SpringBean) ctx.getBean("springBean");
+
 //        //to find JVM shutdown hook
 //        Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
 //            @Override

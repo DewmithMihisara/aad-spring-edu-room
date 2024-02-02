@@ -24,8 +24,6 @@ public class AppInitializer {
         Runtime.getRuntime().addShutdownHook(new Thread(){
             @Override
             public void run() {
-                System.out.println("JVM Shutdown Hook");
-
                 //close the application context(best practice)
                 ctx.close();
             }

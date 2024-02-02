@@ -21,12 +21,12 @@ public class AppInitializer {
         System.out.println(bean1);
 
         //to find JVM shutdown hook
-        Runtime.getRuntime().addShutdownHook(new Thread(){
+        Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
             @Override
             public void run() {
                 //close the application context(best practice)
                 ctx.close();
             }
-        });
+        }));
     }
 }

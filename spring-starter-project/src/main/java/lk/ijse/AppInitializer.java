@@ -8,6 +8,8 @@ public class AppInitializer {
         //create the application context
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
         ctx.register(AppConfig.class);
+
+        //when add configuration class to the application context, need to refresh the application context(best practice)
         ctx.refresh();
 
 
@@ -17,5 +19,8 @@ public class AppInitializer {
 
         SpringBean bean1 = ctx.getBean(SpringBean.class);
         System.out.println(bean1);
+
+        //close the application context(best practice)
+        ctx.close();
     }
 }

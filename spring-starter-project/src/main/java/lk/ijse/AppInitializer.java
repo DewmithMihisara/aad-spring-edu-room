@@ -33,5 +33,14 @@ public class AppInitializer {
 
         //we can simplify the above code using this method.
         ctx.registerShutdownHook();
+
+        boolean javaBean = ctx.containsBeanDefinition("getJavaBean");
+        System.out.println("meka java bean ek ; "+javaBean);
+
+        boolean springBeanFour = ctx.containsBeanDefinition("springBean");
+        System.out.println("meka springBeanFour ek ; "+springBeanFour);
+
+        boolean springBeanFour1 = ctx.containsBeanDefinition("springBeanFour");
+        System.out.println("meka springBeanFour ek ; "+springBeanFour1);
     }
 }

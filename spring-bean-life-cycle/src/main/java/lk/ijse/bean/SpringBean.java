@@ -14,12 +14,12 @@ public class SpringBean implements BeanNameAware, BeanFactoryAware, ApplicationC
 
     @Override
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
-        System.out.println("Bean Factory is Set....");
+        System.out.println("Bean Factory is Set...."+beanFactory);
     }
 
     @Override
     public void setBeanName(String name) {
-        System.out.println("Bean Name is Set....");
+        System.out.println("Bean Name is Set...." + name);
     }
 
     @Override
@@ -34,6 +34,6 @@ public class SpringBean implements BeanNameAware, BeanFactoryAware, ApplicationC
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        System.out.println("Application Context is Set....");
+        System.out.println("Application Context is Set...."+applicationContext);
     }
 }

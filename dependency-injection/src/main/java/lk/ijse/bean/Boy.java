@@ -1,6 +1,7 @@
 package lk.ijse.bean;
 
 import jakarta.annotation.PostConstruct;
+import lk.ijse.util.Injector;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,9 +10,32 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
 @Component("lahiru")
-public class Boy implements BeanFactoryAware, BeanNameAware, ApplicationContextAware, DisposableBean {
-    @Autowired
+public class Boy implements Injector, BeanFactoryAware, BeanNameAware, ApplicationContextAware, DisposableBean {
+
+//    //property injection
+//    @Autowired
+//    private GoodGirl gf;
+
+//    -----------------------------
+
+//    //setter injection
+//    private GoodGirl gf;
+//    @Autowired
+//    public void setGf(GoodGirl gf) {
+//        this.gf = gf;
+//    }
+
+//    ----------------------------
+
+//    //interface injection
+
     private GoodGirl gf;
+    @Autowired
+    @Override
+    public void inject(GoodGirl gf) {
+        this.gf = gf;
+    }
+
     public Boy(){
         System.out.println("Boy -constructor");
         System.out.println("have i got a girl friend ? " + gf);

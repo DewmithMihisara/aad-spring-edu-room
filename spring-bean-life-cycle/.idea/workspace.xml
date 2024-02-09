@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="445b8fc2-f640-4b0c-8bbe-3e9a3e4cd089" name="Changes" comment="add another bean for annotation use for this">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="445b8fc2-f640-4b0c-8bbe-3e9a3e4cd089" name="Changes" comment="add annotation for init and destroy">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/AppInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/AppInitializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/bean/SpringBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/bean/SpringBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/bean/SpringBeanTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/bean/SpringBeanTwo.java" afterDir="false" />
     </list>
@@ -84,7 +85,7 @@
       <option name="presentableId" value="Default" />
       <updated>1707469690875</updated>
       <workItem from="1707469692111" duration="15000" />
-      <workItem from="1707469802559" duration="2795000" />
+      <workItem from="1707469802559" duration="4422000" />
     </task>
     <task id="LOCAL-00001" summary="make context">
       <option name="closed" value="true" />
@@ -142,7 +143,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707472397171</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add annotation for init and destroy">
+      <option name="closed" value="true" />
+      <created>1707472701457</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1707472701457</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +165,7 @@
     <MESSAGE value="register config" />
     <MESSAGE value="example done" />
     <MESSAGE value="add another bean for annotation use for this" />
-    <option name="LAST_COMMIT_MESSAGE" value="add another bean for annotation use for this" />
+    <MESSAGE value="add annotation for init and destroy" />
+    <option name="LAST_COMMIT_MESSAGE" value="add annotation for init and destroy" />
   </component>
 </project>

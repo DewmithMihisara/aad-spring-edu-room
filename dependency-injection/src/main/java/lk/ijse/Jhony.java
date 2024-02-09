@@ -1,7 +1,8 @@
 package lk.ijse;
 
-public class Main {
+public class Jhony {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Girl g=new Mia();
+        g.love();
     }
 }

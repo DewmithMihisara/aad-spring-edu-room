@@ -14,11 +14,11 @@ public class AppInitializer {
 
 
         //get bean can use for get the object from application context
-        AppConfig bean = ctx.getBean(AppConfig.class);
-        System.out.println(bean);
-
-        SpringBean bean1 = ctx.getBean(SpringBean.class);
-        System.out.println(bean1);
+//        AppConfig bean = ctx.getBean(AppConfig.class);
+//        System.out.println(bean);
+//
+//        SpringBean bean1 = ctx.getBean(SpringBean.class);
+//        System.out.println(bean1);
 
         SpringBean springBean = (SpringBean) ctx.getBean("springBean");
 

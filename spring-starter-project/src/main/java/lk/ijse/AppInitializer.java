@@ -1,5 +1,7 @@
 package lk.ijse;
 
+import com.edu.ijse.JavaBean;
+import com.edu.ijse.SpringBeanFour;
 import lk.ijse.bean.SpringBean;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -34,13 +36,23 @@ public class AppInitializer {
         //we can simplify the above code using this method.
         ctx.registerShutdownHook();
 
-        boolean javaBean = ctx.containsBeanDefinition("javaBean");
-        System.out.println("meka java bean ek ; "+javaBean);
+//        boolean javaBean = ctx.containsBeanDefinition("javaBean");
+//        System.out.println("meka java bean ek ; "+javaBean);
+//
+//        boolean springBeanFour = ctx.containsBeanDefinition("springBean");
+//        System.out.println("meka springBeanFour ek ; "+springBeanFour);
+//
+//        boolean springBeanFour1 = ctx.containsBeanDefinition("four");
+//        System.out.println("meka springBeanFour ek ; "+springBeanFour1);
 
-        boolean springBeanFour = ctx.containsBeanDefinition("springBean");
-        System.out.println("meka springBeanFour ek ; "+springBeanFour);
+        SpringBeanFour bean1 = ctx.getBean(SpringBeanFour.class);
+        System.out.println(bean1);
 
-        boolean springBeanFour1 = ctx.containsBeanDefinition("four");
-        System.out.println("meka springBeanFour ek ; "+springBeanFour1);
+        SpringBeanFour bean2 = ctx.getBean(SpringBeanFour.class);
+        System.out.println(bean2);
+
+        SpringBeanFour bean3 = ctx.getBean(SpringBeanFour.class);
+        System.out.println(bean3);
+
     }
 }

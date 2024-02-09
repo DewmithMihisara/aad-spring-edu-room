@@ -6,6 +6,7 @@ import lk.ijse.bean.SpringBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
 
 @Configuration
 //@ComponentScan
@@ -15,7 +16,12 @@ public class AppConfig {
 //    public AppConfig() {
 //        System.out.println("AppConfig Instantiated");
 //    }
+
+
+
+//    @Bean
     @Bean(name = "javaBean")
+    @Scope("prototype")
     public JavaBean getJavaBean(){
         return new JavaBean();
     }

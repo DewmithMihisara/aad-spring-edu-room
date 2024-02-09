@@ -15,7 +15,7 @@ public class AppConfig {
 //    public AppConfig() {
 //        System.out.println("AppConfig Instantiated");
 //    }
-    @Bean
+    @Bean(name = "javaBean")
     public JavaBean getJavaBean(){
         return new JavaBean();
     }

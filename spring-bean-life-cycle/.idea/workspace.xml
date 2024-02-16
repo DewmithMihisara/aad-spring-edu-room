@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="445b8fc2-f640-4b0c-8bbe-3e9a3e4cd089" name="Changes" comment="add annotation for init and destroy">
+    <list default="true" id="445b8fc2-f640-4b0c-8bbe-3e9a3e4cd089" name="Changes" comment="init bean when singleton scope">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/AppInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/AppInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/bean/SpringBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/bean/SpringBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/bean/SpringBeanTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/bean/SpringBeanTwo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,22 +30,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.AppInitializer.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/dewmithmihisara/ijse/aad-spring/spring-bean-life-cycle",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.AppInitializer.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/dewmithmihisara/ijse/aad-spring/spring-bean-life-cycle&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="AppInitializer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="lk.ijse.AppInitializer" />
@@ -85,7 +82,9 @@
       <option name="presentableId" value="Default" />
       <updated>1707469690875</updated>
       <workItem from="1707469692111" duration="15000" />
-      <workItem from="1707469802559" duration="4422000" />
+      <workItem from="1707469802559" duration="7833000" />
+      <workItem from="1708055221254" duration="18000" />
+      <workItem from="1708058372297" duration="757000" />
     </task>
     <task id="LOCAL-00001" summary="make context">
       <option name="closed" value="true" />
@@ -151,7 +150,23 @@
       <option name="project" value="LOCAL" />
       <updated>1707472701457</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="init bean when prototype scope">
+      <option name="closed" value="true" />
+      <created>1707474327453</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1707474327453</updated>
+    </task>
+    <task id="LOCAL-00010" summary="init bean when singleton scope">
+      <option name="closed" value="true" />
+      <created>1707474410821</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1707474410821</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,6 +181,8 @@
     <MESSAGE value="example done" />
     <MESSAGE value="add another bean for annotation use for this" />
     <MESSAGE value="add annotation for init and destroy" />
-    <option name="LAST_COMMIT_MESSAGE" value="add annotation for init and destroy" />
+    <MESSAGE value="init bean when prototype scope" />
+    <MESSAGE value="init bean when singleton scope" />
+    <option name="LAST_COMMIT_MESSAGE" value="init bean when singleton scope" />
   </component>
 </project>

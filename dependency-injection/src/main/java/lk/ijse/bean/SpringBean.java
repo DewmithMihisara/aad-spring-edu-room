@@ -11,10 +11,10 @@ import java.util.Set;
 
 @Component
 public class SpringBean {
-//    public SpringBean(String[]name){
-//        System.out.println("SpringBean - Constructor");
-//        System.out.println(Arrays.toString(name));
-//    }
+    public SpringBean(@Qualifier("puka-sudui")String[]name){
+        System.out.println("SpringBean - Constructor");
+        System.out.println(Arrays.toString(name));
+    }
 
 //    public SpringBean(List<String>name){
 //        System.out.println("SpringBean - Constructor()");

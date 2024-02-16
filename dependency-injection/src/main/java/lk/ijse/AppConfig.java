@@ -16,12 +16,14 @@ public class AppConfig {
 
     @Bean
     @Order(3)
+    @Qualifier("puka-sudui")
     public String name2(){
         return "Esoft";
     }
 
     @Bean
     @Order(1)
+    @Qualifier("puka-sudui")
     public String name3(){
         return "NSBM";
     }

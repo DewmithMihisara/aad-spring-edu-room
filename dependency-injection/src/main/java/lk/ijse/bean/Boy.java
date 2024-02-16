@@ -13,12 +13,14 @@ import org.springframework.stereotype.Component;
 public class Boy implements Injector, BeanFactoryAware, BeanNameAware, ApplicationContextAware, DisposableBean {
 
 //    //property injection
+
 //    @Autowired
 //    private GoodGirl gf;
 
 //    -----------------------------
 
 //    //setter injection
+
 //    private GoodGirl gf;
 //    @Autowired
 //    public void setGf(GoodGirl gf) {
@@ -29,11 +31,20 @@ public class Boy implements Injector, BeanFactoryAware, BeanNameAware, Applicati
 
 //    //interface injection
 
+//    private GoodGirl gf;
+//    @Autowired
+//    @Override
+//    public void inject(GoodGirl gf) {
+//        this.gf = gf;
+//    }
+
+//    -------------------------------
+
+    //constructor injection
     private GoodGirl gf;
     @Autowired
-    @Override
-    public void inject(GoodGirl gf) {
-        this.gf = gf;
+    public Boy(GoodGirl gf){
+        this.gf=gf;
     }
 
     public Boy(){
@@ -63,5 +74,10 @@ public class Boy implements Injector, BeanFactoryAware, BeanNameAware, Applicati
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         System.out.println("Application Context is Set...."+applicationContext);
+    }
+
+    @Override
+    public void inject(GoodGirl gf) {
+
     }
 }

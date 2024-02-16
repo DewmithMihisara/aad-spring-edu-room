@@ -2,6 +2,7 @@ package lk.ijse.bean;
 
 import jakarta.annotation.PostConstruct;
 import lk.ijse.util.Injector;
+import lk.ijse.util.WhitePussy;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,7 +46,7 @@ public class Boy implements Injector, BeanFactoryAware, BeanNameAware, Applicati
 
     private GoodGirl gf;
     @Autowired
-    public Boy(@Qualifier("big ass") GoodGirl gf){
+    public Boy(@Qualifier("big ass") @WhitePussy GoodGirl gf){
         this.gf=gf;
     }
 

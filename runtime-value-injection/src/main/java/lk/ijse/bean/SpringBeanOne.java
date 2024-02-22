@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-@Component
+//@Component
 public class SpringBeanOne {
     @Value("Chamath")
     private String name;

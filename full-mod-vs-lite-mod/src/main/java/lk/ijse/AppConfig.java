@@ -11,16 +11,16 @@ import org.springframework.context.annotation.Scope;
 @ComponentScan
 public class AppConfig {
     //SpringBeanTwo in full mode
-//    @Bean
-//    public SpringBeanTwo springBeanTwo(){
-//        System.out.println("SpringBeanTwo() method is involved");
-//        return new SpringBeanTwo(springBeanFour());
-//    }
-//    //SpringBeanTwo in full mode
-//    @Bean
-//    @Scope("prototype")
-//    public SpringBeanFour springBeanFour(){
-//        System.out.println("SpringBeanFour() method is involved");
-//        return new SpringBeanFour();
-//    }
+    @Bean
+    public SpringBeanTwo springBeanTwo(){
+        System.out.println("SpringBeanTwo() method is involved");
+        return new SpringBeanTwo(springBeanFour());
+    }
+    //SpringBeanTwo in full mode
+    @Bean
+    @Scope("prototype")
+    public SpringBeanFour springBeanFour(){
+        System.out.println("SpringBeanFour() method is involved");
+        return new SpringBeanFour();
+    }
 }

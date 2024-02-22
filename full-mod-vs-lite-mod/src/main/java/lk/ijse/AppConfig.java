@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ComponentScan
 public class AppConfig {
+    //SpringBeanTwo in full mode
     @Bean
     public SpringBeanTwo springBeanTwo(){
         return new SpringBeanTwo();

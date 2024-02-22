@@ -17,9 +17,7 @@ public class SpringBeanOne {
                          @Value("5") int no,
                          @Value("5.5") double doubleNO,
                          @Value("true") boolean bool,
-                         @Value("5,6,7,8") int[] arr,
-                         @Value("5,6,7,8") List<String> list,
-                         @Value("A,B,C,D")Set<String> set){
+                         @Value("5,6,7,8") int[] arr){
 
 
         System.out.println("SpringBeanOne - Constructor()");
@@ -29,8 +27,6 @@ public class SpringBeanOne {
         System.out.println("doubleNO : "+doubleNO);
         System.out.println("bool : "+bool);
         System.out.println("arr : "+ Arrays.toString(arr));
-        System.out.println("list : "+list);
-        System.out.println("set : " + set);
     }
 
     @PostConstruct

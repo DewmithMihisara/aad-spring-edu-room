@@ -10,10 +10,10 @@ public class SpringBeanOne {
     private String name;
     public SpringBeanOne(@Value("puka") String myString){
         System.out.println("SpringBeanOne - Constructor() : " + myString);
-        System.out.println(name);
+        System.out.println("name : "+name);
     }
     @PostConstruct
     private void initialize(){
-        System.out.println(name);
+        System.out.println("name : "+name);
     }
 }

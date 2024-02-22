@@ -3,5 +3,5 @@ package lk.ijse;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class Config1 {
+public class DAOConfig {
 }

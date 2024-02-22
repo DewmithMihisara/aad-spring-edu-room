@@ -1,7 +1,7 @@
 package lk.ijse.bean;
 
 public class SpringBeanTwo {
-    public SpringBeanTwo(){
-        System.out.println("SpringBeanTwo - Constructor()");
+    public SpringBeanTwo(SpringBeanFour springBeanFour){
+        System.out.println("SpringBeanTwo - Constructor() - " + springBeanFour);
     }
 }

@@ -12,7 +12,7 @@ public class AppConfig {
     //SpringBeanTwo in full mode
     @Bean
     public SpringBeanTwo springBeanTwo(){
-        return new SpringBeanTwo();
+        return new SpringBeanTwo(springBeanFour());
     }
 
     @Bean

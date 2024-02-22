@@ -20,5 +20,6 @@ public class SpringBeanThree {
         System.out.println(env.getProperty("app.env4"));
         System.out.println(env.getProperty("os.name"));
         System.out.println(env.getProperty("USER"));
+        System.out.println(env.getRequiredProperty("app.env10"));
     }
 }

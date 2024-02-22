@@ -11,4 +11,5 @@ import org.springframework.context.annotation.ImportResource;
 @ImportResource("classpath:context.xml")
 @Import({DAOConfig.class, BOConfig.class})
 public class AppConfig {
+
 }

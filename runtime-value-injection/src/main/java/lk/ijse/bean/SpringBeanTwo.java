@@ -5,9 +5,16 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class SpringBeanTwo {
-    public SpringBeanTwo(@Value("${USER}") String user) {
+    //how to access os ev
+//    public SpringBeanTwo(@Value("${USER}") String user) {
+//        System.out.println("SpringBeanTwo : Constructor()");
+//        System.out.println("user : " + user);
+//    }
+
+    //how to access JRE properties
+    public SpringBeanTwo(@Value("${os.name}") String osName) {
         System.out.println("SpringBeanTwo : Constructor()");
-        System.out.println("user : " + user);
+        System.out.println("osName : " + osName);
     }
 
 }

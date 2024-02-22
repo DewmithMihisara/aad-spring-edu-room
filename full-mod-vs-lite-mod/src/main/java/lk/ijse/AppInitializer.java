@@ -7,5 +7,6 @@ public class AppInitializer {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
         context.register(AppConfig.class);
         context.refresh();
+        context.registerShutdownHook();
     }
 }

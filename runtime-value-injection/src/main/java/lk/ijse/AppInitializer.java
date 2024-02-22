@@ -1,7 +1,12 @@
 package lk.ijse;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 public class AppInitializer {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
+        context.register(AppConfig.class);
+        context.refresh();
+        context.registerShutdownHook();
     }
 }

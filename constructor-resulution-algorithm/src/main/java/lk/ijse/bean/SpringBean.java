@@ -6,5 +6,6 @@ import org.springframework.stereotype.Component;
 public class SpringBean {
     public SpringBean() {
         System.out.println("SpringBean - Constructor");
+        System.out.println("testing push");
     }
 }

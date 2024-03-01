@@ -15,4 +15,8 @@ public class AppConfig {
     public Integer myInt(){
         return 31;
     }
+    @Bean
+    public Boolean isMale(){
+        return true;
+    }
 }

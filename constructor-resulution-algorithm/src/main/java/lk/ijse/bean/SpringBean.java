@@ -22,7 +22,6 @@ public class SpringBean {
         System.out.println("Spring Bean :(String,int,boolean)");
         System.out.printf("name=%s, age=%s, isMale=%s\n", name, age, isMale);
     }
-    @Autowired(required = false)
     public SpringBean(String name, int age, boolean isMale, @Nullable float temp) {
         this.name = name;
         this.age = age;
@@ -32,4 +31,10 @@ public class SpringBean {
         System.out.printf("name=%s, age=%s, isMale=%s, temp=%s\n", name, age, isMale, temp);
     }
 
+    public SpringBean(String name, int age) {
+        this.name = name;
+        this.age = age;
+        System.out.println("Spring Bean :(String,int)");
+        System.out.printf("name=%s, age=%s\n", name, age);
+    }
 }

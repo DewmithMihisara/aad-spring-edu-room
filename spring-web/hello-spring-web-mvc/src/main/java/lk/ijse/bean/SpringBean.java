@@ -14,26 +14,28 @@ public class SpringBean implements BeanNameAware, BeanFactoryAware, ApplicationC
 
     @Override
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
+        System.out.println("Bean Factor Aware");
 
     }
 
     @Override
     public void setBeanName(String name) {
-
+        System.out.println("Bean Name Aware");
     }
 
     @Override
     public void destroy() throws Exception {
-
+        System.out.println("Destroy Bean");
     }
 
     @Override
     public void afterPropertiesSet() throws Exception {
-
+        System.out.println("Initialize Bean");
     }
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+        System.out.println("Application context Aware");
 
     }
 }

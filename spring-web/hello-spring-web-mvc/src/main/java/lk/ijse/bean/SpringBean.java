@@ -5,8 +5,12 @@ import org.springframework.beans.factory.*;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RestController;
 
-@Component
+//@Component
+//@Controller
+//@RestController
 public class SpringBean implements BeanNameAware, BeanFactoryAware, ApplicationContextAware, InitializingBean, DisposableBean {
     public SpringBean() {
         System.out.println("Spring bean-constructor()");
@@ -15,7 +19,6 @@ public class SpringBean implements BeanNameAware, BeanFactoryAware, ApplicationC
     @Override
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
         System.out.println("Bean Factor Aware");
-
     }
 
     @Override
@@ -36,6 +39,5 @@ public class SpringBean implements BeanNameAware, BeanFactoryAware, ApplicationC
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         System.out.println("Application context Aware");
-
     }
 }

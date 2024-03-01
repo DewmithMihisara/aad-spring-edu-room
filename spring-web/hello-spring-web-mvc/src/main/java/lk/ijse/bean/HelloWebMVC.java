@@ -1,10 +1,15 @@
 package lk.ijse.bean;
 
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/hello")
 public class HelloWebMVC {
-    public HelloWebMVC() {
-        System.out.println("HelloWebMVC - constructor()");
+    @GetMapping
+    public String myMethod(){
+        System.out.println("myMethod() - is invoked");
+        return "myMethod()";
     }
 }

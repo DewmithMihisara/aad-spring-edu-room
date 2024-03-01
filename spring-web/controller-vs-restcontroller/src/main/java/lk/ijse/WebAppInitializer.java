@@ -3,6 +3,10 @@ package lk.ijse;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+    public WebAppInitializer() {
+        System.out.println("WebAppInitializer Instantiated");
+    }
+
     @Override
     protected Class<?>[] getRootConfigClasses() {
         return new Class[]{WebRootConfig.class};

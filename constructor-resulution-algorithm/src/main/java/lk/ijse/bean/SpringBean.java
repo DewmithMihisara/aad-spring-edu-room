@@ -9,9 +9,9 @@ public class SpringBean {
     private int age;
     private boolean isMale;
     private float temp;
-    public SpringBean() {
-        System.out.println("SpringBean - Constructor");
-    }
+//    public SpringBean() {
+//        System.out.println("SpringBean - Constructor");
+//    }
     public SpringBean(String name, int age, boolean isMale) {
         this.name = name;
         this.age = age;

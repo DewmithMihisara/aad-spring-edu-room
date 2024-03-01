@@ -1,6 +1,7 @@
 package lk.ijse.bean;
 
 import jakarta.annotation.Nullable;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -19,6 +20,7 @@ public class SpringBean {
         System.out.println("Spring Bean :(String,int,boolean)");
         System.out.printf("name=%s, age=%s, isMale=%s\n", name, age, isMale);
     }
+    @Autowired
     public SpringBean(String name, int age, boolean isMale, @Nullable float temp) {
         this.name = name;
         this.age = age;

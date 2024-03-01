@@ -12,6 +12,6 @@ public class MyController2 {
     }
     @GetMapping
     public String hello(){
-        return "Hello from MyController2";
+        return "someThing";
     }
 }

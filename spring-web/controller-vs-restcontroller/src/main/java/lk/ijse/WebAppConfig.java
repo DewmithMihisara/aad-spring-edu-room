@@ -7,6 +7,6 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @EnableWebMvc
 public class WebAppConfig {
     public WebAppConfig() {
-        System.out.println("WebAppConfig Instantiated");
+        System.out.println("WebAppConfig Instantiated -constructor()");
     }
 }

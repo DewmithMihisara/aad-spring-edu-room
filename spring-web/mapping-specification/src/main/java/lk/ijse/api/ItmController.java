@@ -12,7 +12,7 @@ public class ItmController {
     public String svItmJson(){
         return "I accept only application/json";
     }
-    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(consumes = MediaType.APPLICATION_XML_VALUE)
     public String svItmXml(){
         return "I accept only application/xml";
     }

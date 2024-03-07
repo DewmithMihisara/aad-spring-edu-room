@@ -17,8 +17,19 @@ public class MappingSpecController {
 //    path mapping
 //    @GetMapping(path = "/ijse")
     @GetMapping("/ijse")
-
     public String getMapTwo(){
         return "getMapTwo()";
+    }
+
+//    =====================================
+//    character mapping
+
+    @GetMapping("ijse/gdse")
+    public String getMapThree(){
+        return "getMapThree()";
+    }
+    @GetMapping("ijse/gd?se???")
+    public String getMapFour(){
+        return "getMapFour()";
     }
 }

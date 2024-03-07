@@ -32,4 +32,31 @@ public class MappingSpecController {
     public String getMapFour(){
         return "getMapFour()";
     }
+
+
+//    =========================
+//    wildcard mapping
+
+    @GetMapping("/ijse/*")
+    public String getMapFive(){
+        return "getMapFive()";
+    }
+
+    @GetMapping("/ijse/*/galle")
+    public String getMapSix(){
+        return "getMapSix()";
+    }
+    @GetMapping("/ijse/*/*/galle")
+    public String getMapSeven(){
+        return "getMapSeven()";
+    }
+
+    @GetMapping("/ijse/**")
+    public String getMapEight(){
+        return "getMapEight()";
+    }
+    @GetMapping("/ijse/galle*")
+    public String getMap9(){
+        return "getMap9()";
+    }
 }

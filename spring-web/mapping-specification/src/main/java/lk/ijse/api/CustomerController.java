@@ -21,7 +21,7 @@ public class CustomerController {
     }
 
     @GetMapping("/{city}/{name}")
-    public String getCusCityAndName(@PathVariable("city") String city, @PathVariable String name){
+    public String getCusCityAndName(@PathVariable("city") String city, @PathVariable("name") String name){
         return String.format("city : %s   |   name : %s",city,name);
     }
 

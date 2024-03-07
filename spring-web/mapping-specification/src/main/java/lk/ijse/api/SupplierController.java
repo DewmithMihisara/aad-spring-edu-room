@@ -14,7 +14,7 @@ public class SupplierController {
     }
 
     @GetMapping("/getag")
-    public String getAge(@RequestParam("id") String id, @RequestParam("age") int age){
+    public String getAge(@RequestParam("id") String id, @RequestParam("age") String age){
         return String.format("id : %s  |  age : %s",id,age);
     }
 }

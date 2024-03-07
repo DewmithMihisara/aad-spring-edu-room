@@ -11,9 +11,12 @@ public class MappingSpecController {
     public String getMapOne(){
         return "getMapOne()";
     }
-    //can  set path using this ways
+
+//    can  set path using this ways
+//    ==================================
+//    path mapping
 //    @GetMapping(path = "/ijse")
-    @GetMapping("ijse")
+    @GetMapping("/ijse")
 
     public String getMapTwo(){
         return "getMapTwo()";

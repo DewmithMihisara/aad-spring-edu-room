@@ -25,4 +25,9 @@ public class CustomerController {
         return String.format("city : %s   |   name : %s",city,name);
     }
 
+    @GetMapping("/customer/{id:C\\d{3}}")
+    public String getCusById(@PathVariable("id") String id){
+        return String.format("id : %s",id);
+    }
+
 }

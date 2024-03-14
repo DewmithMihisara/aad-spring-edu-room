@@ -1,6 +1,6 @@
 $('#btnGetAll').click(function () {
     $.ajax({
-        url : "http://localhost:8080/app/customers",
+        url : "http://localhost:8080/app/api/v1/customers",
         method : "GET",
         success : function (resp) {
             console.log("Success: ", resp);
@@ -42,7 +42,7 @@ $('#btnSave').click(function () {
     const jsonObj = JSON.stringify(customerObj);
 
     $.ajax({
-        url: "http://localhost:8080/app/customer/save",
+        url: "http://localhost:8080/app/api/v1/customer/save",
         method: "POST",
         data: jsonObj,
         contentType: "application/json",
@@ -67,7 +67,7 @@ $('#btnDelete').click(function () {
     const id = $('#txt-id').val();
 
     $.ajax({
-        url: "http://localhost:8080/app/customer/" + id,
+        url: "http://localhost:8080/app/api/v1/customer/" + id,
         method: "DELETE",
         success: function (resp, textStatus, jqxhr) {
             console.log("success: ", resp);
@@ -96,7 +96,7 @@ $('#btnUpdate').click(function () {
     const jsonObj = JSON.stringify(customerObj);
 
     $.ajax({
-        url: "http://localhost:8080/app/customer/"+id,
+        url: "http://localhost:8080/app/api/v1/customer/"+id,
         method: "PUT",
         data: jsonObj,
         contentType: "application/json",

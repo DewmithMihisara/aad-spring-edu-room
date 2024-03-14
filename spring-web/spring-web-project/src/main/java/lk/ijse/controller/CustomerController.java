@@ -13,6 +13,7 @@ import java.util.ArrayList;
  */
 @RestController
 @CrossOrigin("*")
+@RequestMapping("/api/v1")
 public class CustomerController {
     @GetMapping(value = "/customers",produces = MediaType.APPLICATION_JSON_VALUE)
     public ArrayList<CustomerDTO> getAllCustomer(){

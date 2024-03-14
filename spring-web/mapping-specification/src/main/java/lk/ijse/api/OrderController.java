@@ -1,6 +1,7 @@
 package lk.ijse.api;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,8 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class OrderController {
 
     @GetMapping
-    public String getOrder() {
-        return "get order";
+    public String getOrder(@RequestHeader("X-token") String token) {
+        return String.format("get order (token=%s)", token);
     }
 
 }

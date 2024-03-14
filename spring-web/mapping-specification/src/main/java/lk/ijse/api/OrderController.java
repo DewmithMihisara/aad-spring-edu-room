@@ -1,5 +1,6 @@
 package lk.ijse.api;
 
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,7 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/order")
 public class OrderController {
 
-    public String getOrder(){
+    @GetMapping
+    public String getOrder() {
         return "get order";
     }
 

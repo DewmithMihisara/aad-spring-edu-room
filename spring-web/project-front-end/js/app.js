@@ -67,7 +67,7 @@ $('#btnDelete').click(function () {
     const id = $('#txt-id').val();
 
     $.ajax({
-        url: "http://localhost:8080/app/customers?id=" + id,
+        url: "http://localhost:8080/app/customer/" + id,
         method: "DELETE",
         success: function (resp, textStatus, jqxhr) {
             console.log("success: ", resp);

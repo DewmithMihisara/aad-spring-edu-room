@@ -14,7 +14,7 @@ import java.util.ArrayList;
 @RestController
 @CrossOrigin("*")
 public class CustomerController {
-    @GetMapping(value = "/customers")
+    @GetMapping(value = "/customers",produces = MediaType.APPLICATION_JSON_VALUE)
     public ArrayList<CustomerDTO> getAllCustomer(){
         ArrayList<CustomerDTO> customerDTOS=new ArrayList<>();
 
@@ -24,9 +24,13 @@ public class CustomerController {
 
         return customerDTOS;
     }
-    
+
     @PostMapping(value = "/customer/save",consumes = MediaType.APPLICATION_JSON_VALUE)
     public void saveCustomer(@RequestBody CustomerDTO customerDTO){
         System.out.println(customerDTO);
+    }
+    @DeleteMapping("/customer/{id}")
+    public void deleteCustomer(@PathVariable("id") String id){
+        System.out.println("delete : "+id);
     }
 }

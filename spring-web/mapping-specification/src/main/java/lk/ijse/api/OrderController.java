@@ -12,4 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/order")
 public class OrderController {
 
+    public String getOrder(){
+        return "get order";
+    }
+
 }

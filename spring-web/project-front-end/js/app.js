@@ -42,7 +42,7 @@ $('#btnSave').click(function () {
     const jsonObj = JSON.stringify(customerObj);
 
     $.ajax({
-        url: "http://localhost:8080/app/customers",
+        url: "http://localhost:8080/app/customer/save",
         method: "POST",
         data: jsonObj,
         contentType: "application/json",

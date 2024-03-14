@@ -2,10 +2,7 @@ package lk.ijse.controller;
 
 import lk.ijse.dto.CustomerDTO;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
@@ -26,5 +23,10 @@ public class CustomerController {
         customerDTOS.add(new CustomerDTO("C003","Rajapaksha","Madamulana"));
 
         return customerDTOS;
+    }
+    
+    @PostMapping(value = "/customer/save",consumes = MediaType.APPLICATION_JSON_VALUE)
+    public void saveCustomer(@RequestBody CustomerDTO customerDTO){
+        System.out.println(customerDTO);
     }
 }

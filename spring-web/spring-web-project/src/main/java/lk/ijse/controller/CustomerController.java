@@ -33,4 +33,9 @@ public class CustomerController {
     public void deleteCustomer(@PathVariable("id") String id){
         System.out.println("delete : "+id);
     }
+    @PutMapping("/customer/{id}")
+    public void updateCustomer(@PathVariable("id") String id, @RequestBody CustomerDTO customerDTO){
+        System.out.println("need update this id : " + id);
+        System.out.println(customerDTO);
+    }
 }

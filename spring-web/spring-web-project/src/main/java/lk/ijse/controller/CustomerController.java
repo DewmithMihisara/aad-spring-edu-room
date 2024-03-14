@@ -39,4 +39,8 @@ public class CustomerController {
         System.out.println("need update this id : " + id);
         System.out.println(customerDTO);
     }
+    @GetMapping(value = "/customer/{id}",produces = MediaType.APPLICATION_JSON_VALUE)
+    public CustomerDTO getCustomer(@PathVariable("id") String id) {
+        return new CustomerDTO(id,"lahiru","mathara");
+    }
 }

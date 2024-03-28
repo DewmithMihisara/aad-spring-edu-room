@@ -41,8 +41,8 @@ public class CustomerController {
 
     @PutMapping(value = "/{id}",consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void updateCustomer(@PathVariable("id") String id,
-                               @Valid @RequestBody CustomerDTO customer){
+    public void updateCustomer(@PathVariable("id") String id, @Valid @RequestBody CustomerDTO customer){
+        customer.setId(id);
         customerService.updateCustomer(customer);
     }
 

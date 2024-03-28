@@ -6,4 +6,7 @@ package lk.ijse.service.exception;
  * @since 1.0.0
  */
 public class NotFoundException extends ServiceException{
+    public NotFoundException(String message) {
+        super(message);
+    }
 }

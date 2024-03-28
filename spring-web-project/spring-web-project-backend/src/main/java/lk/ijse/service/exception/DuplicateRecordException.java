@@ -6,4 +6,7 @@ package lk.ijse.service.exception;
  * @since 1.0.0
  */
 public class DuplicateRecordException extends ServiceException{
+    public DuplicateRecordException(String message) {
+        super(message);
+    }
 }

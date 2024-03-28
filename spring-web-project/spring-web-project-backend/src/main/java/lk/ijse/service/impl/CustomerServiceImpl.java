@@ -5,6 +5,7 @@ import lk.ijse.dto.CustomerDTO;
 import lk.ijse.entity.Customer;
 import lk.ijse.repositories.CustomerRepository;
 import lk.ijse.service.CustomerService;
+import lk.ijse.service.exception.NotFoundException;
 import lk.ijse.service.util.Transformer;
 import lk.ijse.service.util.UtilMatter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,7 +36,7 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public CustomerDTO getCustomerDetails(String id) {
         if (!customerRepo.existsById(id))
-            throw new RuntimeException("No customer for ID: " + id);
+            throw new NotFoundException("No customer for ID: " + id);
         return transformer.fromCustomerEntity(customerRepo.findById(id).get());
     }
 
@@ -48,14 +49,14 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public void updateCustomer(CustomerDTO customerDTO) {
         if (!customerRepo.existsById(customerDTO.getId()))
-            throw new RuntimeException("No customer for ID: " + customerDTO.getId());
+            throw new NotFoundException("No customer for ID: " + customerDTO.getId();
         customerRepo.save(transformer.toCustomerEntity(customerDTO));
     }
 
     @Override
     public void deleteCustomer(String id) {
         if (!customerRepo.existsById(id))
-            throw new RuntimeException("No customer for ID: " + id);
+            throw new NotFoundException("No customer for ID: " + id);
         customerRepo.deleteById(id);
     }
 }

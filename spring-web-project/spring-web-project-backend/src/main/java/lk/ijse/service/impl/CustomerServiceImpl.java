@@ -34,6 +34,8 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public CustomerDTO getCustomerDetails(String id) {
+        if (!customerRepo.existsById(id))
+            throw new RuntimeException("No customer for ID: " + id);
         return transformer.fromCustomerEntity(customerRepo.findById(id).get());
     }
 
@@ -45,11 +47,15 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public void updateCustomer(CustomerDTO customerDTO) {
+        if (!customerRepo.existsById(customerDTO.getId()))
+            throw new RuntimeException("No customer for ID: " + customerDTO.getId());
         customerRepo.save(transformer.toCustomerEntity(customerDTO));
     }
 
     @Override
     public void deleteCustomer(String id) {
+        if (!customerRepo.existsById(id))
+            throw new RuntimeException("No customer for ID: " + id);
         customerRepo.deleteById(id);
     }
 }

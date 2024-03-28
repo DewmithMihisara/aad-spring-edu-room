@@ -50,3 +50,4 @@ public class CustomerController {
         return customerService.getCustomerDetails(id);
     }
 }
+

@@ -1,5 +1,6 @@
 package lk.ijse.api;
 
+import jakarta.validation.Valid;
 import lk.ijse.dto.CustomerDTO;
 import lk.ijse.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +29,7 @@ public class CustomerController {
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.CREATED)
-    public void saveCustomer(@RequestBody CustomerDTO customer){
+    public void saveCustomer(@Valid @RequestBody CustomerDTO customer){
         customerService.saveCustomer(customer);
     }
 
@@ -41,7 +42,7 @@ public class CustomerController {
     @PutMapping(value = "/{id}",consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void updateCustomer(@PathVariable("id") String id,
-                               @RequestBody CustomerDTO customer){
+                               @Valid @RequestBody CustomerDTO customer){
         customerService.updateCustomer(customer);
     }
 

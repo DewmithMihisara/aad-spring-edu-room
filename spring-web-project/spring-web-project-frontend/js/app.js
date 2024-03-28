@@ -1,3 +1,4 @@
+
 $('#btnGetAll').click(function () {
     $.ajax({
         url : "http://localhost:8080/app/api/v1/customers",
@@ -25,10 +26,6 @@ $('#btnGetAll').click(function () {
 });
 
 $('#btnSave').click(function () {
-    /* application/x-www-form-urlencoded */
-    /*var data = $('#formCustomers').serialize();
-    console.log(data);*/
-
     const id = $('#txt-id').val();
     const name = $('#txt-name').val();
     const address = $('#txt-address').val();
@@ -42,7 +39,7 @@ $('#btnSave').click(function () {
     const jsonObj = JSON.stringify(customerObj);
 
     $.ajax({
-        url: "http://localhost:8080/app/api/v1/customer/save",
+        url: "http://localhost:8080/app/api/v1/customers",
         method: "POST",
         data: jsonObj,
         contentType: "application/json",
@@ -67,7 +64,7 @@ $('#btnDelete').click(function () {
     const id = $('#txt-id').val();
 
     $.ajax({
-        url: "http://localhost:8080/app/api/v1/customer/" + id,
+        url: "http://localhost:8080/app/api/v1/customers/" + id,
         method: "DELETE",
         success: function (resp, textStatus, jqxhr) {
             console.log("success: ", resp);
@@ -96,7 +93,7 @@ $('#btnUpdate').click(function () {
     const jsonObj = JSON.stringify(customerObj);
 
     $.ajax({
-        url: "http://localhost:8080/app/api/v1/customer/"+id,
+        url: "http://localhost:8080/app/api/v1/customers/" + id,
         method: "PUT",
         data: jsonObj,
         contentType: "application/json",
@@ -112,4 +109,3 @@ $('#btnUpdate').click(function () {
         }
     })
 });
-

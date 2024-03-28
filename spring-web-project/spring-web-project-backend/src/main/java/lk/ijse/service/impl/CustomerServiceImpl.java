@@ -1,10 +1,12 @@
 package lk.ijse.service.impl;
 
+import jakarta.transaction.Transactional;
 import lk.ijse.dto.CustomerDTO;
 import lk.ijse.entity.Customer;
 import lk.ijse.repositories.CustomerRepository;
 import lk.ijse.service.CustomerService;
 import lk.ijse.service.util.Transformer;
+import lk.ijse.service.util.UtilMatter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +19,7 @@ import java.util.List;
  * @since 1.0.0
  */
 @Service
+@Transactional
 public class CustomerServiceImpl implements CustomerService {
     @Autowired
     Transformer transformer;
@@ -35,8 +38,9 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public void saveCustomer(CustomerDTO customerDTO) {
-        customerRepo.save(transformer.toCustomerEntity(customerDTO));
+    public CustomerDTO saveCustomer(CustomerDTO customerDTO) {
+        customerDTO.setId(UtilMatter.generateID());
+        return transformer.fromCustomerEntity(customerRepo.save(transformer.toCustomerEntity(customerDTO)));
     }
 
     @Override

@@ -49,7 +49,7 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public void updateCustomer(CustomerDTO customerDTO) {
         if (!customerRepo.existsById(customerDTO.getId()))
-            throw new NotFoundException("No customer for ID: " + customerDTO.getId();
+            throw new NotFoundException("No customer for ID: " + customerDTO.getId());
         customerRepo.save(transformer.toCustomerEntity(customerDTO));
     }
 

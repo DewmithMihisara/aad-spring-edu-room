@@ -5,5 +5,5 @@ package lk.ijse.service.exception;
  * @date 2024-03-28
  * @since 1.0.0
  */
-public class NotFoundException {
+public class NotFoundException extends ServiceException{
 }

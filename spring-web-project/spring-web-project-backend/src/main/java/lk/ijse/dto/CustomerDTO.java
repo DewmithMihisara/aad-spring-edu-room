@@ -25,4 +25,5 @@ public class CustomerDTO implements Serializable {
     private String name;
     @NotBlank(message = "Address is mandatory")
     private String address;
+    private String profilePic;
 }

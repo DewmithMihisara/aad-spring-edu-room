@@ -19,6 +19,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @Transactional
 @WebAppConfiguration
 class CustomerRepositoryTest {
+
     @Autowired
     CustomerRepository customerRepository;
 
@@ -26,5 +27,12 @@ class CustomerRepositoryTest {
     void saveCustomer(){
         customerRepository.save(new Customer("C001", "Dewmith", "Colombo", "acacacascxsa"));
         assertNotNull(customerRepository.findById("C001"));
+    }
+    @Test
+    void findCustomersByName(){
+        customerRepository.save(new Customer("C001", "Dewmith", "Colombo", "acacacascxsa"));
+        customerRepository.save(new Customer("C002", "Dewmith", "Colombo", "acacacascxsa"));
+        customerRepository.save(new Customer("C003", "Dewmith", "Colombo", "acacacascxsa"));
+        assertEquals(3, customerRepository.findCustomersByName("Dewmith").size());
     }
 }

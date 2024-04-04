@@ -75,4 +75,10 @@ class CustomerRepositoryTest {
         List<Customer> allCustomers = customerRepository.getCustomerWithHQL();
         allCustomers.forEach(System.out::println);
     }
+    @Test
+    void getAllCustomerByNameAAndAddress(){
+        addCustomers();
+        List<Customer> allCustomers = customerRepository.getAllCustomerByNameAAndAddress("Dewmith", "Colombo");
+        allCustomers.forEach(System.out::println);
+    }
 }

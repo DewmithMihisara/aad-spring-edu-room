@@ -22,4 +22,6 @@ public interface CustomerRepository extends JpaRepository<Customer,String> {
     List<Customer> getAllCustomerWithJPQL();
     @Query(value = "from Customer c")
     List<Customer> getCustomerWithHQL();
+    @Query(value = "select * from Customer where name = ?1 and address = ?2",nativeQuery = true)
+    List<Customer> getAllCustomerByNameAAndAddress(String name, String address);
 }

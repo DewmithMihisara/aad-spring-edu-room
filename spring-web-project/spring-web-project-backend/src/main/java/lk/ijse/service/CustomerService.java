@@ -1,6 +1,7 @@
 package lk.ijse.service;
 
 import lk.ijse.dto.CustomerDTO;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 

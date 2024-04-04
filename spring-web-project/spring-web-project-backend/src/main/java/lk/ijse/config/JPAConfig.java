@@ -4,6 +4,7 @@ import jakarta.persistence.EntityManagerFactory;
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.env.Environment;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
@@ -24,23 +25,28 @@ import javax.sql.DataSource;
 @EnableJpaRepositories(basePackages = "lk.ijse.repositories")
 @EnableTransactionManagement
 public class JPAConfig {
+    Environment env;
+
+    public JPAConfig(Environment env) {
+        this.env = env;
+    }
+
     @Bean
     public DataSource dataSource() {
         DriverManagerDataSource dmds=new DriverManagerDataSource();
-        dmds.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        dmds.setUrl("jdbc:mysql://localhost:3306/spring_jpa?createDatabaseIfNotExist=true");
-        dmds.setUsername("root");
-        dmds.setPassword("Dew@2005");
+        dmds.setDriverClassName(env.getRequiredProperty("spring.datasource.driverClassName"));
+        dmds.setUrl(env.getRequiredProperty("spring.datasource.url"));
+        dmds.setUsername(env.getRequiredProperty("spring.datasource.username"));
+        dmds.setPassword(env.getRequiredProperty("spring.datasource.password"));
         return dmds;
     }
 
     @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
-
         HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         vendorAdapter.setGenerateDdl(true);
         vendorAdapter.setShowSql(true);
-        vendorAdapter.setDatabasePlatform("org.hibernate.dialect.MySQL8Dialect");
+        vendorAdapter.setDatabasePlatform(env.getRequiredProperty("spring.jpa.properties.hibernate.dialect"));
         vendorAdapter.setDatabase(Database.MYSQL);
         LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
         factory.setJpaVendorAdapter(vendorAdapter);
